@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você é de fora?</title>
+    <style>
+
+        *{
+            margin:0;
+            padding: 0;}
+
+        body{
+            font: normal 1.2em Verdana, arial, helvetica, sans-serif;
+            color: white;
+
+            padding: 30px 20px;
+            
+
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-image: radial-gradient(#7c8a85,#63639c,#6d781d,#317245);
+        }
+        main{
+            margin: auto;
+            margin-top: 30px;
+            padding: 15px;
+            max-width: 70vh;
+            max-height: 300px;
+
+            border-radius: 10px;
+
+            background-color: rgba(255, 255, 255, 0.613);
+            color:black;
+        }
+        body > h1{
+            padding: 30px;
+            text-align: center;
+        }
+        div > h1{
+            line-height: 5px;
+            text-align: center;
+            text-shadow: 1px 4px 8px black;  
+        }
+       .cinput{
+            margin: 20px;
+            display:inline-block;
+            
+            padding: 10px 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificador de estrangeiros</h1>
+    <main>
+        <div id="divvid">
+
+            <p>Em que pais você nasceu?</p>
+            <input type="text"
+            name="tex"
+            class="cinput"
+            id="tex" >
+
+            <input type="button"class="cinput"  value="Verificar" onclick="verificador()">
+
+        </div>
+        <div id="brazuka">
+           
+        </div>
+    </main>
+
+    <script>
+       function verificador(){
+            var texto = document.getElementById("tex").value.toLowerCase();
+            var local = document.getElementById("brazuka");
+            if(texto == "brasil"){
+                local.innerHTML = `<p>É um <strong>Brazuka</strong> de verdade 😎</p>`;
+            }
+            else{
+                local.innerHTML =`<p> <strong>FAKE NATTY</strong> você um estrangeiro safado!</p>`;
+            }
+       }
+         /*
+            
+            
+        */
+       
+    </script>
+</body>
+</html>
