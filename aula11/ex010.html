@@ -4,14 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detran</title>
+    <style>
+        h1{
+            margin: 0px;
+        }
+        body {
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-image: linear-gradient(to bottom,#905555, rgb(158, 108, 108), rgb(156, 140, 140),transparent);
+            font: normal 1.4em Arial;
+            color:white;
+        }   
+        h1 {
+            margin-bottom: 34px;
+            text-align: center;
+            text-shadow: 1px 3px 5px black;
+        }
+        main p {
+            display: inline;
+            font-size: 1.1em;
+
+        }
+        main{
+            padding: 30px;
+            background-color: rgba(114, 114, 188, 0.574);
+        }
+        #principal{
+            text-align: center;
+        }
+        #resp{
+            padding: 15px;
+            font: bold 1.1em Verdana;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.24);
+        }
+        #resp > p > strong{
+            color: rgb(211, 168, 168);
+        }
+    </style>
 </head>
 <body>
-    <H1>Sistema de multas</H1>
-   velocidade do carro <input type="number" name="texvel" id="texvel">Km/h
-   <input type="button" value="verificar" onclick="calcular()">
-    <div id="resp" >
+    
+    <main>
+        <H1>Sistema de multas</H1>
+           <div id="principal">
+            
+               <p>velocidade do carro</p> <input type="number" name="texvel" id="texvel">Km/h
+               <input type="button" value="verificar" onclick="calcular()">
+               
+           </div>
+        <div id="resp" ></div>
         
-    </div>
+    </main>
+    
    <script>
   
     function calcular() {
