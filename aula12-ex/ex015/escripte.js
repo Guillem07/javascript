@@ -21,6 +21,6 @@ function verificar(){
         }
         resp.style.textAline = 'center';
         resp.innerHTML = `Detectamos ${genero} com ${idade} anos.`
-
+       
     }
 }
